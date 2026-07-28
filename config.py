@@ -18,6 +18,7 @@ ARQUIVO_ZIP = "data/raw/arquivos.zip"
 
 # mapeamento dos arquivos dentro do zip
 ANO = 2025
+TAMANHO_BLOCO = 50000
 ARQUIVOS = {
     "viagem": {
         "nome_csv": f"{ANO}_Viagem.csv",
