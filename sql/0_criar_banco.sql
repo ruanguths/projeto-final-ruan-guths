@@ -4,29 +4,30 @@ USE viagem_gov;
 
 -- RAW
 
+-- Todas as colunas do raw_viagem estão como TEXT pois estava dando diversos erros referentes ao tamanho quando usava VARCHAR
 CREATE TABLE IF NOT EXISTS raw_viagem (
-    identificador_do_processo_de_viagem VARCHAR(255),
-    numero_da_proposta_PCDP VARCHAR(255),
-    situacao VARCHAR(255),
-    viagem_urgente VARCHAR(255),
-    justificativa_urgencia_viagem VARCHAR(255),
-    codigo_do_orgao_superior VARCHAR(255),
-    nome_do_orgao_superior VARCHAR(255),
-    codigo_orgao_solicitante VARCHAR(255),
-    nome_orgao_solicitante VARCHAR(255),
-    CPF_viajante VARCHAR(255),
-    nome VARCHAR(255),
-    cargo VARCHAR(255),
-    funcao VARCHAR(255),
-    descricao_funcao VARCHAR(255),
-    periodo_data_de_inicio VARCHAR(255),
-    periodo_data_de_fim VARCHAR(255),
-    destinos VARCHAR(255),
-    motivo VARCHAR(255),
-    valor_diarias VARCHAR(255),
-    valor_passagens VARCHAR(255),
-    valor_devolucao VARCHAR(255),
-    valor_outros_gastos VARCHAR(255)
+    identificador_do_processo_de_viagem TEXT,
+    numero_da_proposta_PCDP TEXT,
+    situacao TEXT,
+    viagem_urgente TEXT,
+    justificativa_urgencia_viagem TEXT, 
+    codigo_do_orgao_superior TEXT,
+    nome_do_orgao_superior TEXT,
+    codigo_orgao_solicitante TEXT,
+    nome_orgao_solicitante TEXT,
+    CPF_viajante TEXT,
+    nome TEXT,
+    cargo TEXT,
+    funcao TEXT,
+    descricao_funcao TEXT,
+    periodo_data_de_inicio TEXT,
+    periodo_data_de_fim TEXT,
+    destinos TEXT,
+    motivo TEXT, 
+    valor_diarias TEXT,
+    valor_passagens TEXT,
+    valor_devolucao TEXT,
+    valor_outros_gastos TEXT
 );
 
 CREATE TABLE IF NOT EXISTS raw_pagamento (

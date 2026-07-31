@@ -14,7 +14,7 @@ MYSQL_CONFIG = {
 }
 
 # caminho do arquivo zip
-ARQUIVO_ZIP = "data/raw/arquivos.zip"
+ARQUIVO_ZIP = "data/raw/viagens_2025_6meses.zip"
 
 # mapeamento dos arquivos dentro do zip
 ANO = 2025
