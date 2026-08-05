@@ -103,6 +103,7 @@ CREATE TABLE IF NOT EXISTS silver_viagem (
     valor_outros_gastos DECIMAL(10,2) CHECK (valor_outros_gastos >= 0),
     valor_total DECIMAL(10,2) NOT NULL,
     duracao_dias INT
+    custo_medio_diario DECIMAL(10,2) CHECK (custo_medio_diario >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS silver_pagamento (
@@ -135,7 +136,7 @@ CREATE TABLE IF NOT EXISTS silver_passagem (
 CREATE TABLE IF NOT EXISTS silver_trecho (
     id_trecho INT PRIMARY KEY AUTO_INCREMENT, 
     id_viagem VARCHAR(20) NOT NULL, -- já é unique pq é primary key na tabela silver_viagem
-    sequencia_trecho INT UNIQUE,
+    sequencia_trecho INT,
     origem_data DATE,
     origem_uf VARCHAR(40),
     origem_cidade VARCHAR(80),
