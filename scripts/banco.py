@@ -14,6 +14,13 @@ Execute o arquivo 0_criar_banco.sql primeiro.""")
 def executar(conexao, sql):
     cursor = conexao.cursor()
     cursor.execute(sql)
+
+    if sql.strip().upper().startswith("SELECT"):
+        resultado = cursor.fetchall()
+        colunas = [desc[0] for desc in cursor.description] # list comprehension coletando o nome das colunas (.description) em um select
+        cursor.close()
+        return resultado, colunas
+
     conexao.commit()
     cursor.close()
 

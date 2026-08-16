@@ -1,0 +1,26 @@
+As perguntas de negócio a serem respondidas serão:
+
+1. quais viajens urgentes custam mais por dia do que as não urgentes?
+    - silver_viagem, agrupando por viagem_urgente
+    - métricas: qtd de viagens, duração média em dias, valor total médio e custo médio diario de cada grupo
+    - gráfico: barras verticais, comparando o custo médio diário dos dois grupos, com a quantidade de viagens indicadas no rótulo
+    - análise: a urgência encarece o dia da viagem? o grupo urgente é revelante em volume ou é exceção dentro do total de gastos?
+
+2. Como o custo médio diário varia conforme a duração da viagem?
+    - silver_viagem, com faixas de duração dias criadas por CASE WHEN (1 dia, 2 a 3 dias, 4 a 7 dias, 8 a 15, acima de 15)
+    - métricas: quantidade de viagens por faixa, custo médio diário e valor total médio
+    - gráfico: barras por faixa de duração para custo médio diário. opcionalmente, uma linha sobreposta com a quantidade de viagens em eixo secundário
+    - análise: há diluição do custo diário nas viagens longas, já que a passagem se distribui por mais dias? em que faixa está o dia de viagens mais caro?
+
+3. Como o valor pago evoluiu mês a mês e qual tipo de pagamento sustenta essa evolução?
+    - gold_resumo_pagamento_mensais (ou a VIEW), por ano, mês e tipo de pagamento
+    - métricas: valor total pago por mês e por tipo de pagamento e a participação percentual de cada tipo no mês
+    - gráfico: linhas com uma série por tipo de pagamento e os meses no eixo x. como alternativa, barras empilhadas para evidenciar a composição
+    - análise: há sazonalidade no período? algum tipo de pagamento ganha ou perde participação ao longo dos meses?
+
+4. Qual o perfil de gastos dos órgãos pagadores?
+    - gold_resumo_pagamento_mensais somada ao longo dos meses e agrupada por nome_orgao_pagador, limitada aos 10 maiores por valor total pago.
+    - métricas: valor total pago, quantidade de pagamentos, valor médio por pagamento e quantidade de viagens atendidas
+    - gráfico: dispersão (bolhas), com quantidade de pagamentos no eixo x, o valor médio por pagamento no eixo y e o tamanho da bolha proporcional
+ao valor total pago. Como alternativa, barras horizontais com valor total e ticket médio.
+    - Análise: separe os órgãos de alto volume e ticket baixo dos de baixo volume e ticket alto, relacionando com a quantidade de viagens atendidas.
