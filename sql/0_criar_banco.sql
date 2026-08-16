@@ -147,3 +147,23 @@ CREATE TABLE IF NOT EXISTS silver_trecho (
     numero_diarias DECIMAL(10,2) CHECK (numero_diarias >= 0),
     FOREIGN KEY (id_viagem) REFERENCES silver_viagem(id_viagem)
 );
+
+-- Gold
+
+CREATE TABLE IF NOT EXISTS gold_resumo_pagamentos_mensais AS
+	SELECT 
+		YEAR(sv.data_inicio) AS ano_referencia,
+		MONTH(sv.data_inicio) AS mes_referencia,
+		sp.nome_orgao_pagador,
+		sp.tipo_pagamento,
+		COUNT(DISTINCT(sv.id_viagem)) AS qtd_viagens,
+		COUNT(DISTINCT(sp.id_pagamento)) AS qtd_pagamentos,
+		ROUND(SUM(sp.valor),2) AS valor_total_pago,
+		ROUND(AVG(sp.valor),2) AS valor_medio_pagamento
+	FROM silver_viagem as sv
+	JOIN silver_pagamento AS sp
+	ON sv.id_viagem = sp.id_viagem
+	GROUP BY YEAR(sv.data_inicio), 
+		MONTH(sv.data_inicio), 
+		sp.nome_orgao_pagador, 
+		sp.tipo_pagamento
