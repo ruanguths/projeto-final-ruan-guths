@@ -71,3 +71,4 @@ O gráfico de barras acima demonstra a relação do custo médio diário com a d
 
 ### Tipos de pagamento e valor total pago
 
+Analisando a tabela da camada Gold (ou VIEW), encontra-se as seguintes informações:
