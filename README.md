@@ -72,3 +72,25 @@ O gráfico de barras acima demonstra a relação do custo médio diário com a d
 ### Tipos de pagamento e valor total pago
 
 Analisando a tabela da camada Gold (ou VIEW), encontra-se as seguintes informações:
+
+![Evolução do valor total durante o período](reports/grafico_evolucao_mensal_valor_total.png)
+
+- Nota-se, pelo gráfico acima, que o mês de janeiro possui um valor total muito superior ao restante dos meses, com uma grande queda para o mês de fevereiro e uma estabilização nos meses restante. Pela análise do gráfico, existe a possibilidade de existir uma relação de sazonalidade, mas não é possível confirmar esta relação pela falta de dados de outros períodos
+
+![Evolução do valor total por tipo de pagamento ao longo do período](reports/grafico_evolucao_mensal_por_tipo_pagamento.png)
+
+- Analisando a evolução do valor total por tipo de pagamento durante o período, percebe-se que o aumento do custo total em janeiro é devido ao tipo de pagamento "DIÁRIAS" que teve um valor muito alto neste mês em relação ao período e aos outros tipos de pagamento
+- o restante dos tipos e dos meses seguem um padrão uniforme, com diárias tendo o maior valor total em todos os períodos
+- os tipos de pagamentos "seguro" e "restituição" possuem os valores ao longo do período muito próximos e, somadas, não representam 1% do total no período, como é possível ver na tabela a seguir:
+
+![tabela participação total dos tipos de pagamento](reports/tabela_participacao_total_tipo_pagamento.jpeg)
+
+### valor total pago por órgãos pagadores
+
+Analisando a tabela da camada Gold (ou View), encontra-se:
+
+![grafico ticket médio dos órgãos pagadores](reports/grafico_ticket_medio_orgaos.png)
+
+- O órgão "Ministério das Relações Exteriores" possui ticket médio (R$ 6.911,03) fora da curva, com quase o dobro da segunda posição (Fundo Nacional de Segurança Pública - R$ 3.489,04). Além disso, a quantidade de viagens desse órgão é menor que os restantes apresentados no gráfico. Isso mostra que são viagens esporádicas mas muito caras
+- O "Funda Nacional de Segurança Pública" representa o segundo órgão com maior ticket médio e esse valor representa um acrécimo de mais de 62% que o restante dos órgãos. A quantidade de viagens desse órgão (27.748 viagens) está acima da maioria dos outros órgãos apresentados no gráfico, atrás apenas dos órgãos "sigiloso" (62.400 viagens) e "Comando da Aeronáutica" (33.692 viagens). Isso mostra um perfil que viaja bastante e gasta acima da média dos dez órgãos com maior ticket médio.
+
