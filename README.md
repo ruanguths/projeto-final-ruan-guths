@@ -43,7 +43,7 @@ Por fim, foi criado outra tabela, que representa a camada Gold, onde traz inform
 
 ## Principais Insights
 
-Analisando os dados da camada Silver, encontrou-se os seguintes fatos:
+Analisando os dados da camada Silver e Gold, encontrou-se os seguintes fatos:
 
 ### Viagens Urgentes
 
@@ -93,4 +93,13 @@ Analisando a tabela da camada Gold (ou View), encontra-se:
 
 - O órgão "Ministério das Relações Exteriores" possui ticket médio (R$ 6.911,03) fora da curva, com quase o dobro da segunda posição (Fundo Nacional de Segurança Pública - R$ 3.489,04). Além disso, a quantidade de viagens desse órgão é menor que os restantes apresentados no gráfico. Isso mostra que são viagens esporádicas mas muito caras
 - O "Funda Nacional de Segurança Pública" representa o segundo órgão com maior ticket médio e esse valor representa um acrécimo de mais de 62% que o restante dos órgãos. A quantidade de viagens desse órgão (27.748 viagens) está acima da maioria dos outros órgãos apresentados no gráfico, atrás apenas dos órgãos "sigiloso" (62.400 viagens) e "Comando da Aeronáutica" (33.692 viagens). Isso mostra um perfil que viaja bastante e gasta acima da média dos dez órgãos com maior ticket médio.
+
+## Conclusão das análises
+
+Depois de analisar cada consulta, tabela e gráficos gerados, as principais conclusões que podem ser tiradas são:
+
+- A maior parte das viagens não são planejadas antecipadamentes (urgentes) e isso encarece o seu custo médio;
+- Com exceção das viagens com duração de 1 dia, que são em média mais baratas que viagens de curto a médio prazo, o custo médio diário das viagens tende a diminuir conforme aumenta a duração da viagem;
+- O mês de janeiro teve um alto custo financeiro, muito por causa do tipo de pagamento "diária", o que não se repete nos meses seguintes, que seguem um padrão de variação próximo. Suspeita-se que possa existir um efeito de sazonalidade - maior custo com viagens no começo do ano, mas Como os dados são de um período pequeno, não há como garantir a existência desse efeito;
+- Não foi encontrado uma relação entre ticket médio dos órgãos pagadores e quantidade de viagens, visto que o top 3 dos órgãos com maiores tickets médio possuem quantidades de viagens muito distintas - O primeiro tem 2.782 viagens, o segundo tem 27.748 viagens, o terceiro tem 62.400 viagens e o restante tem cerca de 12.000 viagens
 
